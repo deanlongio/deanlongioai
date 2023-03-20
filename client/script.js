@@ -58,7 +58,7 @@ function chatStripe(isAi,value,uniqueId){
       `);
 }
 
-const handleSubmit = async (e) => {
+const handleSubmit = async(e) => {
   e.preventDefault();
 
   const data = new FormData(form);
@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
 
   //bot's chatStripe
   const uniqueId = generateUniqueId();
-  chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
+  chatContainer.innerHTML += chatStripe(true, "", uniqueId);
 
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server - > bot's response
-  const response = await fetch('https://deanlongio.onrender.com', {
+  const response = await fetch('https://aiserver.deanlong.io/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
