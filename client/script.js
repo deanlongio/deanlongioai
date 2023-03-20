@@ -51,7 +51,7 @@ function chatStripe(isAi,value,uniqueId){
       <img src="${isAi ? bot : user}"
            alt="${isAi ? 'bot' : 'user'}"/>
       </div>
-      <div class="massage" id = ${uniqueId}>${value}</div>
+      <div class="massage" style="color:#dcdcdc" id = ${uniqueId}>${value}</div>
       </div>
       </div>
       
