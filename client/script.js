@@ -1,12 +1,12 @@
-import bot from './assets/bot.svg'
-import user from './assets/user.svg'
+import bot from './assets/bot.svg';
+import user from './assets/user.svg';
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
 
 let loadInterval;
 
-function loader(element){
+function loader(element) {
   element.textContent = '';
 
   loadInterval = setInterval(() => {
@@ -48,10 +48,10 @@ function chatStripe(isAi,value,uniqueId){
       <div class="wrapper ${isAi && "ai"}">
       <div class="chat">
       <div class="profile">
-      <img src=${isAi ? bot : user}
+      <img src="${isAi ? bot : user}"
            alt="${isAi ? 'bot' : 'user'}"/>
       </div>
-      <divc class="massage" id =${uniqueId}>${value}</divc>></divc>
+      <div class="massage" id = ${uniqueId}>${value}</div>
       </div>
       </div>
       
