@@ -155,6 +155,7 @@ form img {
      background-color: #222 
 }
  .footer-wrapper {
+     display: flex;
      flex-direction: column 
 }
  .footer-logo-column {
@@ -190,3 +191,15 @@ form img {
 .div-block-36 {
     display: flex
 }
+
+.div-block-22 {
+    display: flex;
+    flex-direction: column
+}
+
+.link-block-4,.link-block-5,.text-block-8,.text-block-9 {
+    color: #525252;
+    text-decoration: none
+}
+
+
