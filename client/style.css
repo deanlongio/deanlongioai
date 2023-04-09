@@ -148,3 +148,19 @@ form img {
   width: 30px;
   height: 30px;
 }
+
+.footer {
+     padding-top: 65px;
+     padding-bottom: 10px;
+     background-color: #222 
+}
+ .footer-wrapper {
+     flex-direction: column 
+}
+ .footer-logo-column {
+     margin-bottom: 30px 
+}
+ .social-footer-link {
+     margin-right: 25px;
+     margin-left: 25px 
+}
