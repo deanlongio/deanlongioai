@@ -155,10 +155,17 @@ form img {
      background-color: #222 
 }
  .footer-wrapper {
-     display: flex;
      flex-direction: column 
 }
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
  .footer-logo-column {
+     display: flex;
      margin-bottom: 30px 
 }
  .social-footer-link {
