@@ -126,7 +126,6 @@ form {
 
 textarea {
   width: 100%;
-
   color: #fff;
   font-size: 18px;
 
@@ -149,7 +148,7 @@ form img {
   height: 30px;
 }
 
-.footer {
+/* .footer {
      padding-top: 65px;
      padding-bottom: 10px;
      background-color: #222 
@@ -209,4 +208,4 @@ form img {
     text-decoration: none
 }
 
-
+ */
