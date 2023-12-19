@@ -1,17 +1,16 @@
 import express from "express";
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-import { Configuration, OpenAIApi } from "openai";
+import OpenAI from "openai";
 
 dotenv.config();
 
 
-const configuration = new Configuration({
+
+const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 
 });
-
-const openai = new OpenAIApi(configuration);
 
 const app = express();
 app.use(cors());
@@ -26,7 +25,7 @@ res.status(200).send({
 app.post('/',async(req,res) => {
     try{
         const prompt = req.body.prompt;
-        const response = await openai.createCompletion(
+        const response = await openai.completions.create(
             {
                 model: "gpt-4-1106-preview",
                 prompt: `Based on https://www.deanlong.io/,${prompt}`,
@@ -46,7 +45,7 @@ app.post('/',async(req,res) => {
             // presence_penalty=0
         );
         res.status(200).send({
-            bot: response.data.choices[0].text
+            bot: response.choices[0].text
         })
     } catch (error) {
         console.log(error);
