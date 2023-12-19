@@ -31,7 +31,7 @@ app.post('/',async(req,res) => {
                 prompt: `Based on https://www.deanlong.io/, act like an assistant of this website,${prompt}`,
                 temperature: 0.5, // Higher values means the model will take more risks.
                 max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
-                messages=[
+                messages:[
                     {
                       "role": "user",
                       "content": "Based on https://www.deanlong.io/, act like an assistant of this website"
