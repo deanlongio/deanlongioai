@@ -10,6 +10,6 @@
   },
   "devDependencies": {
     "vite": "^7.1.1",
-    "esbuild": "^0.25.0"
+    "esbuild": "^0.25.8"
   }
 }
