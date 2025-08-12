@@ -1,11 +1,18 @@
-version: 2
-updates:
-  - package-ecosystem: "npm"
-    directory: "/client"
-    schedule:
-      interval: "weekly"
+name: Dependabot (npm multi-folder)
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
 
-  - package-ecosystem: "npm"
-    directory: "/server"
-    schedule:
-      interval: "weekly"
+jobs:
+  run-dependabot:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: ["/client", "/server"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/dependabot-action@main
+        with:
+          package-manager: npm_and_yarn
+          directory: ${{ matrix.dir }}
